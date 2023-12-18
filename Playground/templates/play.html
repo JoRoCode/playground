@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      p {
+        background-color: color;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/script.js') }}"
+      defer
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Welcome!!!</h1>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+        gap: 20px;
+        justify-content: center;
+      "
+    >
+      {% for x in range(0, num ): %}
+      <p
+        style="
+          border-style: solid;
+          border-color: black;
+          height: 200px;
+          min-width: 200px;
+          margin: 15px;
+          box-sizing: border-box;
+          background-color: {{ color }};
+        "
+      ></p>
+      {% endfor %}
+    </div>
+  </body>
+</html>
